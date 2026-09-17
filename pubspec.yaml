@@ -1,0 +1,46 @@
+name: nibble_note
+description: >-
+  Nibble Note — a local-first, encrypted note-taking app with a cute pixel pet
+  you can feed notes to.
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.5.1
+
+  # Local database
+  drift: ^2.20.2
+  drift_flutter: ^0.2.1
+  sqlite3_flutter_libs: ^0.5.24
+  path_provider: ^2.1.4
+  path: ^1.9.0
+
+  # Encryption (Argon2id KDF + AES-GCM authenticated encryption)
+  cryptography: ^2.7.0
+
+  # Secure OS-level storage for the KDF salt and optional biometric-wrapped key
+  flutter_secure_storage: ^9.2.2
+
+  # Utilities
+  intl: ^0.19.0
+  uuid: ^4.4.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+  # Code generation for Drift
+  build_runner: ^2.4.11
+  drift_dev: ^2.20.3
+
+flutter:
+  uses-material-design: true
